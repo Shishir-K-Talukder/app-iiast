@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Cover Page Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Cover Page Generator</h2>
+            <form id="coverForm">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" value="Practical Note Book" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course Name:</label>
+                    <input type="text" id="course" value="B.Sc in Microbiology (Honours) Part-2" required>
+                </div>
+                <div class="form-group">
+                    <label for="examYear">Examination Year:</label>
+                    <input type="text" id="examYear" value="2022" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseCode">Course Code:</label>
+                    <input type="text" id="courseCode" value="MBIO-209" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseTitel">Course Title:</label>
+                    <input type="text" id="courseTitel" value="Bacteriology & Mycology" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="regNo">Registration No:</label>
+                    <input type="text" id="regNo" required>
+                </div>
+                <div class="form-group">
+                    <label for="session">Session:</label>
+                    <input type="text" id="session" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" value="DEPARTMENT OF MICROBIOLOGY" required>
+                </div>
+                <div class="form-group">
+                    <label for="institute">Institute:</label>
+                    <input type="text" id="institute" value="International Institute of Applied Science & Technology , Rangpur." required>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="generatePDF()" class="pdf-button">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                    <button type="button" onclick="window.print()" class="print-button">
+                        <i class="fas fa-print"></i> Print Cover Page
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="preview-container">
+            <div class="page" id="coverPage">
+                <h1 class="main-title">Practical Note Book</h1>
+                <div class="logo">
+                    <img src="logo.png" alt="Institute Logo">
+                </div>
+                <h2 class="course-name"></h2>
+                <h3 class="exam-title"></h3>
+                <div class="course-info">
+                    <p>Course Code : <span id="displayCourseCode"></span></p>
+                    <p>Course Tittel : <span id="displayCourseTitel"></span></p>
+                </div>
+                <div class="submission-info">
+                    <h3>Submitted By</h3>
+                    <p>Student ID : <span id="displayStudentId"></span></p>
+                    <p>Reg No : <span id="displayRegNo"></span></p>
+                    <p>Session : <span id="displaySession"></span></p>
+                </div>
+                <div class="department-info">
+                    <h3 id="displayDepartment"></h3>
+                    <p id="displayInstitute"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
