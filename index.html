@@ -6,9 +6,34 @@
     <title>Practical Cover Page Generator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-info-circle"></i>
+            </a>
+            <a href="#" class="nav-item download-btn" onclick="generatePDF()">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a href="#" class="nav-item print-btn" onclick="window.print()">
+                <i class="fas fa-print"></i>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <div class="nav-indicator"></div>
+        </div>
+        <div class="nav-tooltip"></div>
+    </nav>
     <div class="container">
         <div class="form-container">
             <h2>Cover Page Generator</h2>
